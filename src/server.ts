@@ -7,7 +7,11 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+	cors({
+		origin: "https://dynamic-profile-backend.onrender.com",
+	})
+);
 
 app.get("/", (_, res) => {
 	return res.status(200).json({ data: "Server is up and running!" });
