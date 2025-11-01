@@ -1,0 +1,21 @@
+name: render-build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: []
+
+jobs:
+  call-render-url:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make GET Request to Render Deploy Url
+        id: get_data
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: ${{ secrets.RENDER_DEPLOY_URL }}
+          method: "GET"
+      - name: Show Response
+        run: |
+          echo "Response: ${{ steps.get_data.outputs }}"
