@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import { config } from "~/config";
 import { CatFactType } from "~/types";
@@ -6,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(cors());
+app.use(cors());
 
 app.get("/", (_, res) => {
 	return res.status(200).json({ data: "Server is up and running!" });
