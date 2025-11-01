@@ -21,6 +21,7 @@
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
+    "ts-patch": "^3.3.0",
     "tsconfig-paths": "^4.2.0",
     "tscpaths": "^0.0.9",
     "typescript": "^5.9.3",
