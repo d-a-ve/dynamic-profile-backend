@@ -7,7 +7,7 @@ on:
     branches: []
 
 jobs:
-  call-render-url:
+  trigger-render-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Make GET Request to Render Deploy Url
